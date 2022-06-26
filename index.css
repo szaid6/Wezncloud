@@ -92,78 +92,90 @@ a {
     min-height: 50%;
 }
 
-/*============= MEDIA QUERIES =============*/
+/***** button *****/
 
-/* Devices under 1199px (xl) */
-@media (max-width: 1199.98px) {
-
-
-    .carousel-caption h1 {
-        font-size: 2.8rem;
-    }
-
-    .carousel-caption h4 {
-        font-size: 1.8rem;
-    }
-
-}
-
-/* Devices under 768px (md) */
-@media (max-width: 991.98px) {
-    .carousel-caption h1 {
-        font-size: 2rem;
-    }
-
-    .carousel-caption h4 {
-        font-size: 1.2rem;
-    }
-
-    .btn-lg {
-        font-size: 1rem
-    }
-}
-
-@media (max-width: 770.98px) {
-    .carousel-caption h1 {
-        font-size: 1.5rem;
-    }
-
-    .carousel-caption h4 {
-        font-size: 0.8rem;
-    }
-
-    .btn-lg {
-        font-size: 0.5rem
-    }
-}
-
-@media (max-width: 500.98px) {
-    .carousel-caption h1 {
-        font-size: 1rem;
-    }
-
-    .carousel-caption h4 {
-        font-size: 0.7rem;
-    }
-
-    .btn-lg {
-        font-size: 0.5rem
-    }
-
-    .carousel-caption {
-        position: absolute;
-        top: 34%;
-        transform: translateY(-50%);
-        text-transform: uppercase;
-        transition: 1s;
-    }
-}
-
-.services h5 {
-    font-weight: 700;
-    color: var(--primary-color);
-}
-
+ .btn10 {
+    padding: 15px 100px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    border: 1px solid var(--primary-color);
+    border-radius: 1rem;
+    z-index: 0;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 1s;
+  }
+  
+  .fa-arrow-right {
+    font-size: 30px;
+    /* display: none; */
+    color: var(--main-bg-color);
+  }
+  
+   .btn10:hover {
+    border: 1px solid #071982;
+    color: #80ffd3 !important;
+  }
+  
+   .btn10::before {
+    content: '';
+    width: 0%;
+    height: 100%;
+    display: block;
+    background: #071982;
+    position: absolute;
+    -ms-transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+    left: -10%;
+    opacity: 1;
+    top: 0;
+    z-index: -12;
+    -moz-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+    -webkit-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+    box-shadow: 2px 0px 14px rgba(0, 0, 0, .6);
+  }
+  
+   .btn10::after {
+    content: '';
+    width: 0%;
+    height: 100%;
+    display: block;
+    background: var(--primary-color);
+    position: absolute;
+    -ms-transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+    left: -10%;
+    opacity: 0;
+    top: 0;
+    z-index: -15;
+    -webkit-transition: all .94s cubic-bezier(.2, .95, .57, .99);
+    -moz-transition: all .4s cubic-bezier(.2, .95, .57, .99);
+    -o-transition: all .4s cubic-bezier(.2, .95, .57, .99);
+    transition: all .4s cubic-bezier(.2, .95, .57, .99);
+    box-shadow: 2px 0px 14px rgba(0, 0, 0, .6);
+  }
+  
+   .btn10:hover::before,
+  .btn1O:hover::before {
+    opacity: 1;
+    width: 116%;
+  }
+  
+   .btn10:hover::after,
+  .btn1O:hover::after {
+    opacity: 1;
+    width: 120%;
+  }
+  
+  /***** End button *****/
 
 /***** social links *****/
 
@@ -237,4 +249,79 @@ a {
 }
 
 /***** End social links *****/
+
+/*============= MEDIA QUERIES =============*/
+
+/* Devices under 1199px (xl) */
+@media (max-width: 1199.98px) {
+
+
+    .carousel-caption h1 {
+        font-size: 2.8rem;
+    }
+
+    .carousel-caption h4 {
+        font-size: 1.8rem;
+    }
+
+}
+
+/* Devices under 768px (md) */
+@media (max-width: 991.98px) {
+    .carousel-caption h1 {
+        font-size: 2rem;
+    }
+
+    .carousel-caption h4 {
+        font-size: 1.2rem;
+    }
+
+    .btn-lg {
+        font-size: 1rem
+    }
+}
+
+@media (max-width: 770.98px) {
+    .carousel-caption h1 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption h4 {
+        font-size: 0.8rem;
+    }
+
+    .btn-lg {
+        font-size: 0.5rem
+    }
+}
+
+@media (max-width: 500.98px) {
+    .carousel-caption h1 {
+        font-size: 1rem;
+    }
+
+    .carousel-caption h4 {
+        font-size: 0.7rem;
+    }
+
+    .btn-lg {
+        font-size: 0.5rem
+    }
+
+    .carousel-caption {
+        position: absolute;
+        top: 34%;
+        transform: translateY(-50%);
+        text-transform: uppercase;
+        transition: 1s;
+    }
+}
+
+.services h5 {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+
+
 
