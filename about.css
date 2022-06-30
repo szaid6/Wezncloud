@@ -14,6 +14,25 @@ a {
   text-decoration: none;
 }
 
+div {
+
+  animation: transitionIn 0.5s;
+}
+
+@keyframes transitionIn {
+  from {
+
+      opacity: 0;
+      transform: rotateX(-10deg);
+  }
+
+  to {
+
+      opacity: 1;
+      transform: rotateX(0);
+  }
+}
+
 /*============= NAVIGATION =============*/
 
 .navbar {
@@ -37,6 +56,32 @@ a {
   color: red !important;
 }
 
+/***** OVERLAP *****/
+
+/* .full-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 300px;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  text-align: center;
+  color: var(--primary-color);
+
+}
+
+.full-image span{
+  font-size: 18vw;
+  font-weight: 800;
+  text-shadow: -0.08em 0.03em 0.12em rgba(0, 0, 0, 0.9);
+}
+
+.full-image span:not(:first-child){
+  margin-left: -0.23em;
+} */
+
+/***** End OVERLAP *****/
+
 /***** about button *****/
 
 .about-company .btn10 {
@@ -54,6 +99,10 @@ a {
   text-decoration: none;
   display: inline-block;
   transition-duration: 1s;
+}
+
+.about-company .btn-title{
+  font-size: 25px;
 }
 
 .fa-arrow-down {
@@ -121,6 +170,22 @@ a {
   width: 120%;
 }
 
+@media (max-width: 500.98px){
+  .about-company .btn10 {
+    padding: 15px ;
+    margin: 10px 4px;
+  }
+
+  .about-company .btn-title{
+    font-size: 15px;
+  }
+
+  .fa-arrow-down {
+    font-size: 20px;
+    /* display: none; */
+    color: var(--main-bg-color);
+  }
+}
 /***** End about button *****/
 
 
